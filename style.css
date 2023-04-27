@@ -1,0 +1,71 @@
+/*sets global styling for the app*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+/*sets background color for body of the app  */
+body{
+    background: #001e4d;
+}
+
+/* sets styling for the 'app' class  */
+.app{
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30 px;
+}
+/*styling for the header within the app class  */
+.app h1{
+    font-size: 36px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+/* padding for elements within the quiz class */
+.quiz{
+    padding: 20px 0;
+}
+/* styling for the h2 elements inside the quiz class */
+.quiz h2{
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600; 
+}
+/* styling for the answer buttons */
+.btn{
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3 seconds
+}
+/* adds hover effect for answer buttons  */
+.btn:hover{
+    background: #222;
+    color: #fff;
+}
+/* styling for next button */
+#next-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
