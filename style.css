@@ -51,10 +51,13 @@ body{
     cursor: pointer;
     transition: all 0.3 seconds
 }
-/* adds hover effect for answer buttons  */
-.btn:hover{
+/* adds hover effect for answer buttons that aren't disabled */
+.btn:hover:not([disabled]){
     background: #222;
     color: #fff;
+}
+.btn:disabled{
+    cursor: no-drop;
 }
 /* styling for next button */
 #next-btn{

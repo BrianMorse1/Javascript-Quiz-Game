@@ -53,6 +53,7 @@ const selectAnswer = (e) => {
     if(isCorrect){
         selectedBtn.classList.add("correct");
         console.log('correct')
+        score ++;
     }else{
         selectedBtn.classList.add("incorrect");
         console.log("incorrect")
@@ -66,6 +67,30 @@ const selectAnswer = (e) => {
         nextButton.style.display = "block";    
 };
 
+// function to show score at end of quiz
+const showScore = () => {
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`; 
+
+
+// function to move to the next question or display the score if there are no more questions in the quiz
+const handleNextButton = () => {
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+};
+
+//next button functionality
+nextButton.addEventListener("click", () =>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }else{
+        startQuiz();
+    }
+})
 
 //begins quiz
 startQuiz()
